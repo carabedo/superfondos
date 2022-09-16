@@ -46,11 +46,14 @@ def tonum(x):
   x=x.replace(')','')
   return float(x)
 ```
-Cuando queremos testear nuestra funcion vemos que no puede importar las librerias, por ejemplo para importar `requests` hay que agregar una layer: `arn:aws:lambda:us-east-1:770693421928:layer:Klayers-python38-requests:28`
+
+Podemos probar este codigo en este [colab](https://colab.research.google.com/drive/16Zi5nT8LTgO11EGQ2_qYeLQUfeUn8NeE?usp=sharing)
+
+Luego de haber creado nuestra lambda y queremos testear nuestra funcion vemos que no puede importar las librerias. Una manera de resolver esto es usar 'layers' una especie de entorno virtual reutilizable. Por ejemplo para importar `requests` hay que agregar una layer: `arn:aws:lambda:us-east-1:770693421928:layer:Klayers-python38-requests:28`
 
 ### layers
 
-En este repo esta la [api](https://github.com/keithrozario/Klayers) con algunas layers para las librerias mas comunes, en nuestro proyecto necesitamos (requests, bs4 y pandas)
+En este repo esta la [api](https://github.com/keithrozario/Klayers) con algunas layers para las librerias mas comunes, en nuestro proyecto necesitamos (requests, bs4 y pandas). Luego de agregar una layer para cada libreria nuestra lambda funciona perfectamente.
 
 ## triggers
 
