@@ -4,6 +4,8 @@
 
 Usamos una lambda para el scraping de los datos
 
+Para importar la libreria requests hay que agregar una layer: `arn:aws:lambda:us-east-1:770693421928:layer:Klayers-python38-requests:28`
+
 ## triggers
 
 Creamos un trigger para scrapear diariamente los datos
